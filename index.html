@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innata Belleza & Longevidad - Informe de Campaña</title>
+    <title>Innata Belleza & Longevidad - Informe Global de Campañas</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Playfair Display (Elegancia) e Inter (Legibilidad) -->
+    <!-- Google Fonts: Playfair Display & Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- FontAwesome para Iconos -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -24,6 +24,7 @@
                             goldDark: '#A3845A', /* Oro Oscuro */
                             cream: '#FAF8F5',    /* Crema Suave */
                             blush: '#F5E6E3',    /* Rosa Palo/Blush */
+                            rose: '#E8A598',     /* Acento Rosa Elegante */
                         }
                     },
                     fontFamily: {
@@ -40,670 +41,1054 @@
             background-color: #FAF8F5;
         }
         .header-bg {
-            background: linear-gradient(135deg, #0B221E 0%, #174D42 100%);
-        }
-        .gold-border {
-            border-image: linear-gradient(to right, #C5A880, #EAD7BA, #C5A880) 1;
+            background: linear-gradient(135deg, #0B221E 0%, #174D42 50%, #0F332C 100%);
         }
         .card-shadow {
-            box-shadow: 0 4px 20px -2px rgba(11, 34, 30, 0.05);
+            box-shadow: 0 4px 25px -4px rgba(11, 34, 30, 0.07);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #EAD7BA 0%, #C5A880 50%, #A3845A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F1F1F1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #C5A880;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body class="text-gray-800 antialiased min-h-screen">
 
-    <!-- Header principal con branding y datos globales del informe -->
-    <header class="header-bg text-white py-12 px-6 md:px-12 relative overflow-hidden shadow-xl">
-        <!-- Elementos decorativos abstractos de fondo -->
+    <!-- Header Principal -->
+    <header class="header-bg text-white py-10 px-4 sm:px-6 md:px-12 relative overflow-hidden shadow-2xl">
+        <!-- Blur decorativos -->
         <div class="absolute right-0 top-0 w-96 h-96 bg-innata-gold opacity-10 rounded-full blur-3xl -mr-20 -mt-20"></div>
-        <div class="absolute left-1/3 bottom-0 w-72 h-72 bg-innata-sage opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute left-1/3 bottom-0 w-72 h-72 bg-innata-sage opacity-15 rounded-full blur-3xl"></div>
 
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center relative z-10 gap-8">
-            <!-- Logo & Marca -->
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center relative z-10 gap-6">
             <div>
-                <div class="flex items-center gap-3 mb-2">
-                    <span class="border border-innata-gold text-innata-gold px-3 py-1 text-xs uppercase tracking-widest font-semibold rounded-full">INFORME DE RENDIMIENTO</span>
-                    <span class="bg-emerald-800 text-emerald-200 text-xs px-2.5 py-1 rounded-full font-medium flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Finalizado
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <span class="border border-innata-gold text-innata-gold px-3 py-1 text-xs uppercase tracking-widest font-semibold rounded-full bg-innata-gold/10">INFORME EJECUTIVO GLOBAL</span>
+                    <span class="bg-emerald-900/80 text-emerald-200 border border-emerald-500/30 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 5 Campañas Analizadas
                     </span>
+                    <span class="bg-white/10 text-gray-200 text-xs px-3 py-1 rounded-full font-light">Meta Ads (Facebook & Instagram)</span>
                 </div>
-                <h1 class="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white mb-1">
-                    Innata <span class="text-innata-gold italic font-normal">Belleza & Longevidad</span>
+                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-2">
+                    Innata <span class="gold-gradient-text italic font-normal">Belleza & Longevidad</span>
                 </h1>
-                <p class="text-innata-sage text-sm md:text-base font-light max-w-xl">
-                    Análisis estratégico de adquisición digital para tratamientos de alta gama.
+                <p class="text-innata-sage text-sm md:text-base font-light max-w-2xl">
+                    Consolidado detallado de adquisición digital: Análisis de rendimiento por campañas, zonas anatómicas tratadas (Ojeras, Nariz, Labios) y atracción de marca.
                 </p>
             </div>
 
-            <!-- Datos de Campaña Analizada -->
-            <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl md:min-w-[320px] shadow-2xl">
-                <div class="text-xs text-innata-sage uppercase tracking-wider mb-2 font-semibold">Campaña de Origen (Meta Ads)</div>
-                <div class="text-lg font-serif text-white font-medium mb-1 flex items-center gap-2">
-                    <i class="fa-solid fa-bullseye text-innata-gold"></i>
-                    Campaña #2 - Labios y Nariz
+            <!-- Resumen Rápido Inversión -->
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl lg:min-w-[340px] shadow-2xl flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-innata-sage uppercase tracking-wider mb-1 font-semibold flex items-center justify-between">
+                        <span>Inversión Total Ejecutada</span>
+                        <i class="fa-solid fa-chart-line text-innata-gold"></i>
+                    </div>
+                    <div class="text-3xl font-serif text-white font-bold my-1">$496.098 <span class="text-xs font-sans text-innata-gold font-normal">COP</span></div>
                 </div>
-                <div class="text-xs text-gray-300 flex items-center gap-1.5 mt-2">
-                    <span class="inline-block w-2.5 h-2.5 bg-innata-gold rounded-full"></span> 
-                    Enfoque: Armonización Orofacial (Ácido Hialurónico)
+                <div class="border-t border-white/10 pt-3 mt-3 grid grid-cols-2 gap-2 text-xs">
+                    <div>
+                        <span class="text-gray-400 block text-[11px]">Chats WhatsApp</span>
+                        <span class="text-emerald-300 font-bold text-sm">166 Conversaciones</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block text-[11px]">Visitas a Perfil</span>
+                        <span class="text-innata-gold font-bold text-sm">266 Visitas</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Sección con las 3 métricas estelares de la campaña sacadas de la imagen -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 -mt-6">
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <!-- Tarjeta 1: Resultados (Conversaciones) -->
-            <div class="bg-white rounded-2xl p-6 card-shadow border-t-4 border-innata-gold flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+    <!-- Contenido Principal -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 -mt-6 relative z-20">
+
+        <!-- Tarjetas Metricas Macro -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            <!-- Chat Leads -->
+            <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-innata-gold flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
                 <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="p-3 bg-innata-cream text-innata-emerald rounded-xl">
-                            <i class="fa-solid fa-comments text-xl"></i>
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="p-2.5 bg-emerald-50 text-innata-emerald rounded-xl">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
                         </span>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Excelente</span>
+                        <span class="bg-emerald-100 text-emerald-800 text-[11px] font-semibold px-2 py-0.5 rounded-full">Principal Canal</span>
                     </div>
-                    <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Resultados Obtenidos</h3>
-                    <p class="text-4xl font-serif font-bold text-innata-dark my-1">64</p>
-                    <p class="text-xs font-medium text-innata-emerald">Conversaciones de WhatsApp Iniciadas</p>
+                    <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Leads por WhatsApp</span>
+                    <p class="text-3xl font-serif font-bold text-innata-dark my-1">166 <span class="text-sm font-sans font-normal text-gray-500">chats</span></p>
                 </div>
-                <p class="text-xs text-gray-500 mt-4 border-t pt-3">
-                    Pacientes potenciales interesados de forma directa en rellenos de labios o rinomodelación.
+                <p class="text-xs text-gray-500 mt-3 border-t pt-2.5">
+                    Costo Promedio: <strong class="text-innata-emerald font-bold">$2.753 COP</strong> por cliente interesado.
                 </p>
             </div>
 
-            <!-- Tarjeta 2: Costo por Resultado -->
-            <div class="bg-white rounded-2xl p-6 card-shadow border-t-4 border-innata-emerald flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+            <!-- Visitas Perfil -->
+            <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-innata-sage flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
                 <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="p-3 bg-innata-cream text-innata-emerald rounded-xl">
-                            <i class="fa-solid fa-hand-holding-dollar text-xl"></i>
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="p-2.5 bg-rose-50 text-rose-700 rounded-xl">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
                         </span>
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Costo Óptimo</span>
+                        <span class="bg-purple-100 text-purple-800 text-[11px] font-semibold px-2 py-0.5 rounded-full">Branding</span>
                     </div>
-                    <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Costo por Conversación</h3>
-                    <p class="text-4xl font-serif font-bold text-innata-dark my-1">$2.343</p>
-                    <p class="text-xs font-medium text-innata-emerald">Moneda Local (COP/CLP aprox.)</p>
+                    <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Visitas al Perfil</span>
+                    <p class="text-3xl font-serif font-bold text-innata-dark my-1">266 <span class="text-sm font-sans font-normal text-gray-500">visitas</span></p>
                 </div>
-                <p class="text-xs text-gray-500 mt-4 border-t pt-3">
-                    La inversión promedio requerida para que un prospecto real te escriba pidiendo una cotización.
+                <p class="text-xs text-gray-500 mt-3 border-t pt-2.5">
+                    Costo Promedio: <strong class="text-purple-700 font-bold">$147,92 COP</strong> por visitante.
                 </p>
             </div>
 
-            <!-- Tarjeta 3: Inversión / Presupuesto -->
-            <div class="bg-white rounded-2xl p-6 card-shadow border-t-4 border-innata-sage flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+            <!-- Alcance Único -->
+            <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-innata-emerald flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
                 <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="p-3 bg-innata-cream text-innata-emerald rounded-xl">
-                            <i class="fa-solid fa-wallet text-xl"></i>
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="p-2.5 bg-innata-cream text-innata-emerald rounded-xl">
+                            <i class="fa-solid fa-users text-xl"></i>
                         </span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Consumido al 99.9%</span>
+                        <span class="bg-blue-100 text-blue-800 text-[11px] font-semibold px-2 py-0.5 rounded-full">Personas Únicas</span>
                     </div>
-                    <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Inversión Realizada</h3>
-                    <p class="text-4xl font-serif font-bold text-innata-dark my-1">$149.940</p>
-                    <p class="text-xs font-medium text-gray-500">De un presupuesto total de $150.000</p>
+                    <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Alcance Total</span>
+                    <p class="text-3xl font-serif font-bold text-innata-dark my-1">25.280</p>
                 </div>
-                <div class="mt-4 border-t pt-3">
-                    <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
-                        <div class="bg-innata-gold h-1.5 rounded-full" style="width: 99.96%"></div>
+                <p class="text-xs text-gray-500 mt-3 border-t pt-2.5">
+                    Mujeres y pacientes locales impactados en su feed/reels.
+                </p>
+            </div>
+
+            <!-- Impresiones & Frecuencia -->
+            <div class="bg-white rounded-2xl p-5 card-shadow border-t-4 border-innata-rose flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+                <div>
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="p-2.5 bg-innata-cream text-innata-goldDark rounded-xl">
+                            <i class="fa-solid fa-eye text-xl"></i>
+                        </span>
+                        <span class="bg-amber-100 text-amber-800 text-[11px] font-semibold px-2 py-0.5 rounded-full">Frecuencia: 1,49x</span>
                     </div>
-                    <span class="text-[10px] text-gray-400">Control estricto de presupuesto asignado.</span>
+                    <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Impresiones Totales</span>
+                    <p class="text-3xl font-serif font-bold text-innata-dark my-1">37.788</p>
                 </div>
+                <p class="text-xs text-gray-500 mt-3 border-t pt-2.5">
+                    Veces que tus anuncios fueron mostrados en pantalla.
+                </p>
             </div>
         </div>
 
-        <!-- Panel interactivo que explica minuciosamente cada métrica al hacer clic -->
+        <!-- Resumen por Tratamiento Anatómicamente Destacado -->
+        <section class="bg-white rounded-2xl p-6 md:p-8 card-shadow mb-10 border border-gray-100">
+            <div class="border-b border-gray-200 pb-5 mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-1.5 h-7 bg-innata-gold inline-block rounded-full"></span>
+                        <h2 class="font-serif text-2xl md:text-3xl font-bold text-innata-dark">
+                            Rendimiento por Zona / Tratamiento Estético
+                        </h2>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-1">
+                        Desglose comparativo para descubrir cuál tratamiento genera mayor rentabilidad para Innata.
+                    </p>
+                </div>
+                <div class="bg-innata-cream border border-innata-gold/30 text-innata-goldDark px-4 py-2 rounded-xl text-xs font-semibold self-start md:self-center flex items-center gap-2">
+                    <i class="fa-solid fa-crown text-innata-gold"></i>
+                    <span>Tratamiento Estrella: <strong>Ojeras</strong></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Card Tratamiento 1: OJERAS (GANADOR INDISCUTIBLE) -->
+                <div class="bg-gradient-to-br from-emerald-50/60 to-white p-5 rounded-2xl border-2 border-emerald-500/40 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                        ★ TOP 1 VENTAS
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs">
+                                <i class="fa-solid fa-eye"></i>
+                            </span>
+                            <h3 class="font-serif font-bold text-lg text-innata-dark">Tratamiento Ojeras</h3>
+                        </div>
+                        <div class="my-3">
+                            <span class="text-4xl font-serif font-bold text-emerald-900">116</span>
+                            <span class="text-xs text-emerald-700 font-semibold block mt-0.5">Conversaciones a WhatsApp (69.8% del total)</span>
+                        </div>
+                        <div class="space-y-1.5 text-xs text-gray-600 my-4 bg-white/80 p-3 rounded-xl border border-emerald-100">
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Inversión acumulada:</span>
+                                <strong class="text-gray-800">$284.472 COP</strong>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Costo por lead prom.:</span>
+                                <strong class="text-emerald-700 font-bold">$2.452 COP</strong>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Calidad Meta Ads:</span>
+                                <span class="text-emerald-700 font-semibold">Por encima del promedio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-emerald-800/80 italic bg-emerald-100/50 p-2 rounded-lg border border-emerald-200/50">
+                        "Es el imán principal de pacientes. El costo es súper bajo y la respuesta de la audiencia es masiva."
+                    </p>
+                </div>
+
+                <!-- Card Tratamiento 2: NARIZ / RINOMODELACIÓN -->
+                <div class="bg-white p-5 rounded-2xl border border-gray-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-8 h-8 rounded-full bg-innata-cream text-innata-emerald flex items-center justify-center font-bold text-xs">
+                                <i class="fa-solid fa-face-smile"></i>
+                            </span>
+                            <h3 class="font-serif font-bold text-lg text-innata-dark">Rinomodelación / Nariz</h3>
+                        </div>
+                        <div class="my-3">
+                            <span class="text-4xl font-serif font-bold text-innata-dark">43</span>
+                            <span class="text-xs text-gray-500 font-medium block mt-0.5">Conversaciones a WhatsApp (25.9% del total)</span>
+                        </div>
+                        <div class="space-y-1.5 text-xs text-gray-600 my-4 bg-gray-50 p-3 rounded-xl border border-gray-100">
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Inversión acumulada:</span>
+                                <strong class="text-gray-800">$128.650 COP</strong>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Costo por lead prom.:</span>
+                                <strong class="text-innata-emerald font-bold">$2.991 COP</strong>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Calidad Meta Ads:</span>
+                                <span class="text-blue-700 font-semibold">Promedio saludable</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-gray-500 italic bg-gray-50 p-2 rounded-lg border border-gray-100">
+                        "Excelente opción de alto ticket. Mantiene un costo constante por chat cercano a los $3.000 COP."
+                    </p>
+                </div>
+
+                <!-- Card Tratamiento 3: LABIOS -->
+                <div class="bg-white p-5 rounded-2xl border border-amber-200/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="w-8 h-8 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-xs">
+                                    <i class="fa-solid fa-lips"></i>
+                                </span>
+                                <h3 class="font-serif font-bold text-lg text-innata-dark">Relleno de Labios</h3>
+                            </div>
+                            <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold">Requiere Optimización</span>
+                        </div>
+                        <div class="my-3">
+                            <span class="text-4xl font-serif font-bold text-amber-900">7</span>
+                            <span class="text-xs text-amber-700 font-medium block mt-0.5">Conversaciones a WhatsApp (4.2% del total)</span>
+                        </div>
+                        <div class="space-y-1.5 text-xs text-gray-600 my-4 bg-amber-50/50 p-3 rounded-xl border border-amber-100">
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Inversión acumulada:</span>
+                                <strong class="text-gray-800">$43.648 COP</strong>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Costo por lead prom.:</span>
+                                <strong class="text-amber-800 font-bold">$6.235 COP</strong>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Rendimiento:</span>
+                                <span class="text-amber-700 font-semibold">Costo Elevado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-amber-800/80 italic bg-amber-50 p-2 rounded-lg border border-amber-200/50">
+                        "Genera pocos chats a mayor costo. Se recomienda renovar el video/imagen creativo de labios."
+                    </p>
+                </div>
+
+                <!-- Card Tratamiento 4: BRANDING / RADIESSE / ZACK -->
+                <div class="bg-white p-5 rounded-2xl border border-purple-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-8 h-8 rounded-full bg-purple-50 text-purple-700 flex items-center justify-center font-bold text-xs">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                            <h3 class="font-serif font-bold text-lg text-innata-dark">Videos & Bioestimuladores</h3>
+                        </div>
+                        <div class="my-3">
+                            <span class="text-4xl font-serif font-bold text-purple-950">266</span>
+                            <span class="text-xs text-purple-700 font-medium block mt-0.5">Visitas al Perfil de Instagram</span>
+                        </div>
+                        <div class="space-y-1.5 text-xs text-gray-600 my-4 bg-purple-50/50 p-3 rounded-xl border border-purple-100">
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Inversión acumulada:</span>
+                                <strong class="text-gray-800">$39.348 COP</strong>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Costo por visita:</span>
+                                <strong class="text-purple-700 font-bold">$147,92 COP</strong>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Video Radiesse:</span>
+                                <span class="text-purple-700 font-semibold">258 Visitas ($143 COP)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-purple-900/80 italic bg-purple-50 p-2 rounded-lg border border-purple-200/50">
+                        "Estrategia de posicionamiento de marca. Atrae seguidores al Instagram de Innata a costo mínimo."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tablas Interactivas de Campañas y Anuncios -->
+        <section class="bg-white rounded-2xl p-6 md:p-8 card-shadow mb-10 border border-gray-100">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200 pb-5 mb-6">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold text-innata-dark flex items-center gap-2">
+                        <i class="fa-solid fa-table-list text-innata-gold"></i>
+                        Explorador Completo de Datos
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-0.5">
+                        Selecciona la vista de análisis para examinar el desglose por campaña o por anuncio individual.
+                    </p>
+                </div>
+
+                <!-- Botones de Alternancia de Vistas -->
+                <div class="bg-gray-100 p-1 rounded-xl flex gap-1 self-start md:self-center">
+                    <button onclick="switchTableView('campaigns')" id="tab-btn-campaigns" class="px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200 bg-white text-innata-dark shadow-sm">
+                        <i class="fa-solid fa-bullseye mr-1.5 text-innata-gold"></i> Vista por Campañas (5)
+                    </button>
+                    <button onclick="switchTableView('ads')" id="tab-btn-ads" class="px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200 text-gray-500 hover:text-innata-dark">
+                        <i class="fa-solid fa-rectangle-ad mr-1.5 text-innata-gold"></i> Desglose por Anuncios (14)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabla 1: Vista Por Campañas (Nivel Alto) -->
+            <div id="table-campaigns-view" class="overflow-x-auto custom-scrollbar">
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="bg-innata-dark text-white uppercase text-[10px] tracking-wider font-semibold">
+                            <th class="p-3.5 rounded-tl-xl">Nombre de la Campaña</th>
+                            <th class="p-3.5 text-center">Resultados</th>
+                            <th class="p-3.5">Objetivo / Indicador</th>
+                            <th class="p-3.5 text-right">Costo por Resultado</th>
+                            <th class="p-3.5 text-right">Presupuesto</th>
+                            <th class="p-3.5 text-right">Importe Gastado</th>
+                            <th class="p-3.5 text-center">Impresiones</th>
+                            <th class="p-3.5 text-center rounded-tr-xl">Alcance</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="hover:bg-innata-cream/30 transition-colors">
+                            <td class="p-3.5 font-semibold text-innata-dark">Campaña #1 - Labios y Nariz</td>
+                            <td class="p-3.5 text-center font-bold text-innata-emerald">17</td>
+                            <td class="p-3.5"><span class="bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded font-medium">Conversaciones WhatsApp</span></td>
+                            <td class="p-3.5 text-right font-medium">$2.772,18 COP</td>
+                            <td class="p-3.5 text-right text-gray-500">$30.000 COP</td>
+                            <td class="p-3.5 text-right font-semibold">$47.127 COP</td>
+                            <td class="p-3.5 text-center text-gray-600">4.130</td>
+                            <td class="p-3.5 text-center text-gray-600">3.241</td>
+                        </tr>
+                        <tr class="hover:bg-innata-cream/30 transition-colors bg-emerald-50/20">
+                            <td class="p-3.5 font-semibold text-innata-dark flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                Campaña #2 - Labios y Nariz - Copia
+                            </td>
+                            <td class="p-3.5 text-center font-bold text-emerald-800 text-sm">64</td>
+                            <td class="p-3.5"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Conversaciones WhatsApp</span></td>
+                            <td class="p-3.5 text-right font-bold text-emerald-800">$2.342,81 COP</td>
+                            <td class="p-3.5 text-right text-gray-500">$150.000 COP</td>
+                            <td class="p-3.5 text-right font-semibold">$149.940 COP</td>
+                            <td class="p-3.5 text-center font-medium text-gray-700">11.475</td>
+                            <td class="p-3.5 text-center font-medium text-gray-700">6.941</td>
+                        </tr>
+                        <tr class="hover:bg-innata-cream/30 transition-colors">
+                            <td class="p-3.5 font-semibold text-innata-dark">Campaña #3 - Labios y Nariz</td>
+                            <td class="p-3.5 text-center font-bold text-innata-emerald">47</td>
+                            <td class="p-3.5"><span class="bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded font-medium">Conversaciones WhatsApp</span></td>
+                            <td class="p-3.5 text-right font-medium">$3.484,77 COP</td>
+                            <td class="p-3.5 text-right text-gray-500">$150.000 COP</td>
+                            <td class="p-3.5 text-right font-semibold">$149.845 COP</td>
+                            <td class="p-3.5 text-center text-gray-600">9.098</td>
+                            <td class="p-3.5 text-center text-gray-600">5.807</td>
+                        </tr>
+                        <tr class="hover:bg-innata-cream/30 transition-colors">
+                            <td class="p-3.5 font-semibold text-innata-dark">Video Zack y Radiesse - Visitas al Perfil</td>
+                            <td class="p-3.5 text-center font-bold text-purple-800">266</td>
+                            <td class="p-3.5"><span class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-medium">Visitas a Instagram</span></td>
+                            <td class="p-3.5 text-right font-medium text-purple-800">$147,92 COP</td>
+                            <td class="p-3.5 text-right text-gray-500">$70.000 COP</td>
+                            <td class="p-3.5 text-right font-semibold">$39.348 COP</td>
+                            <td class="p-3.5 text-center text-gray-600">4.409</td>
+                            <td class="p-3.5 text-center text-gray-600">3.506</td>
+                        </tr>
+                        <tr class="hover:bg-innata-cream/30 transition-colors">
+                            <td class="p-3.5 font-semibold text-innata-dark">Campaña #4</td>
+                            <td class="p-3.5 text-center font-bold text-innata-emerald">38</td>
+                            <td class="p-3.5"><span class="bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded font-medium">Conversaciones WhatsApp</span></td>
+                            <td class="p-3.5 text-right font-medium">$2.890,47 COP</td>
+                            <td class="p-3.5 text-right text-gray-500">$50.000 COP</td>
+                            <td class="p-3.5 text-right font-semibold">$109.838 COP</td>
+                            <td class="p-3.5 text-center text-gray-600">8.676</td>
+                            <td class="p-3.5 text-center text-gray-600">5.785</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="bg-innata-cream/80 font-bold text-innata-dark border-t-2 border-innata-gold/40">
+                            <td class="p-3.5 uppercase text-[11px] tracking-wider">TOTALES GENERALES</td>
+                            <td class="p-3.5 text-center text-emerald-900 text-sm">166 chats / 266 vis.</td>
+                            <td class="p-3.5 text-xs text-gray-500">Multicanal Meta Ads</td>
+                            <td class="p-3.5 text-right text-innata-emerald">$2.753 / chat</td>
+                            <td class="p-3.5 text-right text-gray-500">$450.000 COP</td>
+                            <td class="p-3.5 text-right text-emerald-900 text-sm">$496.098 COP</td>
+                            <td class="p-3.5 text-center">37.788</td>
+                            <td class="p-3.5 text-center">25.280</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Tabla 2: Vista Por Anuncios Individuales (Nivel Granular) -->
+            <div id="table-ads-view" class="overflow-x-auto custom-scrollbar hidden">
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="bg-innata-emerald text-white uppercase text-[10px] tracking-wider font-semibold">
+                            <th class="p-3 rounded-tl-xl">Anuncio / Creativo</th>
+                            <th class="p-3 text-center">Resultados</th>
+                            <th class="p-3 text-right">Costo / Result.</th>
+                            <th class="p-3 text-right">Inversión</th>
+                            <th class="p-3 text-center">Impresiones</th>
+                            <th class="p-3 text-center">Alcance</th>
+                            <th class="p-3">Calidad Meta</th>
+                            <th class="p-3">Interacción</th>
+                            <th class="p-3 rounded-tr-xl">Conversiones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <!-- Ojeras #2 (El más exitoso de todos) -->
+                        <tr class="bg-emerald-50/40 hover:bg-emerald-50 font-semibold">
+                            <td class="p-3 text-emerald-950 flex items-center gap-1.5">
+                                <i class="fa-solid fa-star text-innata-gold text-xs"></i>
+                                Campaña #2 - Ojeras
+                            </td>
+                            <td class="p-3 text-center font-bold text-emerald-800 text-sm">46</td>
+                            <td class="p-3 text-right text-emerald-800">$2.250,28 COP</td>
+                            <td class="p-3 text-right">$103.513 COP</td>
+                            <td class="p-3 text-center">7.879</td>
+                            <td class="p-3 text-center">4.597</td>
+                            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-[10px] font-bold">Por encima del promedio</span></td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                        </tr>
+
+                        <!-- Ojeras #4 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #4 - Ojeras</td>
+                            <td class="p-3 text-center font-bold text-emerald-800">36</td>
+                            <td class="p-3 text-right font-medium">$2.740,00 COP</td>
+                            <td class="p-3 text-right">$98.640 COP</td>
+                            <td class="p-3 text-center">7.870</td>
+                            <td class="p-3 text-center">5.274</td>
+                            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-[10px] font-bold">Por encima del promedio</span></td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                        </tr>
+
+                        <!-- Nariz #3 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #3 - Nariz</td>
+                            <td class="p-3 text-center font-bold text-innata-emerald">22</td>
+                            <td class="p-3 text-right font-medium">$3.508,41 COP</td>
+                            <td class="p-3 text-right">$77.185 COP</td>
+                            <td class="p-3 text-center">5.220</td>
+                            <td class="p-3 text-center">3.542</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                        </tr>
+
+                        <!-- Ojeras #3 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #3 - Ojeras</td>
+                            <td class="p-3 text-center font-bold text-innata-emerald">20</td>
+                            <td class="p-3 text-right font-medium">$2.837,56 COP</td>
+                            <td class="p-3 text-right">$45.401 COP</td>
+                            <td class="p-3 text-center">2.695</td>
+                            <td class="p-3 text-center">1.782</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                        </tr>
+
+                        <!-- Nariz #2 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #2 - Nariz</td>
+                            <td class="p-3 text-center font-bold text-innata-emerald">16</td>
+                            <td class="p-3 text-right font-medium">$2.453,19 COP</td>
+                            <td class="p-3 text-right">$39.251 COP</td>
+                            <td class="p-3 text-center">3.216</td>
+                            <td class="p-3 text-center">2.057</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                        </tr>
+
+                        <!-- Ojeras #1 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #1 - Ojeras</td>
+                            <td class="p-3 text-center font-bold text-innata-emerald">14</td>
+                            <td class="p-3 text-right font-medium">$2.637,00 COP</td>
+                            <td class="p-3 text-right">$36.918 COP</td>
+                            <td class="p-3 text-center">3.022</td>
+                            <td class="p-3 text-center">2.310</td>
+                            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-[10px] font-bold">Por encima del promedio</span></td>
+                            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-[10px] font-bold">Por encima del promedio</span></td>
+                            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-[10px] font-bold">Por encima del promedio</span></td>
+                        </tr>
+
+                        <!-- Video Radiesse -->
+                        <tr class="hover:bg-purple-50/30">
+                            <td class="p-3 font-semibold text-purple-900">Video Radiesse (Visitas)</td>
+                            <td class="p-3 text-center font-bold text-purple-800">258</td>
+                            <td class="p-3 text-right text-purple-800 font-medium">$143,72 COP</td>
+                            <td class="p-3 text-right">$37.079 COP</td>
+                            <td class="p-3 text-center">4.191</td>
+                            <td class="p-3 text-center">3.391</td>
+                            <td class="p-3"><span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-[10px]">Debajo del promedio (-35%)</span></td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                        </tr>
+
+                        <!-- Labios #3 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #3 - Labios</td>
+                            <td class="p-3 text-center font-bold text-amber-700">5</td>
+                            <td class="p-3 text-right font-medium text-amber-800">$5.451,80 COP</td>
+                            <td class="p-3 text-right">$27.259 COP</td>
+                            <td class="p-3 text-center">1.183</td>
+                            <td class="p-3 text-center">864</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                            <td class="p-3 text-gray-600">Promedio</td>
+                        </tr>
+
+                        <!-- Nariz #1 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #1 - Nariz</td>
+                            <td class="p-3 text-center font-bold text-innata-emerald">3</td>
+                            <td class="p-3 text-right font-medium">$2.838,33 COP</td>
+                            <td class="p-3 text-right">$8.515 COP</td>
+                            <td class="p-3 text-center">897</td>
+                            <td class="p-3 text-center">702</td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                        </tr>
+
+                        <!-- Labios #2 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #2 - Labios</td>
+                            <td class="p-3 text-center font-bold text-amber-700">2</td>
+                            <td class="p-3 text-right font-medium text-amber-800">$3.588,00 COP</td>
+                            <td class="p-3 text-right">$7.176 COP</td>
+                            <td class="p-3 text-center">380</td>
+                            <td class="p-3 text-center">233</td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                        </tr>
+
+                        <!-- Nariz #4 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-innata-dark">Campaña #4 - Nariz</td>
+                            <td class="p-3 text-center font-bold text-innata-emerald">2</td>
+                            <td class="p-3 text-right font-medium">$1.849,50 COP</td>
+                            <td class="p-3 text-right">$3.699 COP</td>
+                            <td class="p-3 text-center">298</td>
+                            <td class="p-3 text-center">246</td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                        </tr>
+
+                        <!-- Video Zack -->
+                        <tr class="hover:bg-purple-50/30">
+                            <td class="p-3 font-semibold text-purple-900">Video Zack (Visitas)</td>
+                            <td class="p-3 text-center font-bold text-purple-800">8</td>
+                            <td class="p-3 text-right text-purple-800 font-medium">$283,63 COP</td>
+                            <td class="p-3 text-right">$2.269 COP</td>
+                            <td class="p-3 text-center">218</td>
+                            <td class="p-3 text-center">198</td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                            <td class="p-3 text-gray-400">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Diccionario Interactivo para Clientes -->
         <section class="bg-white rounded-2xl p-6 md:p-8 card-shadow mb-10 border border-gray-100">
             <div class="border-b border-gray-200 pb-5 mb-6">
                 <h2 class="font-serif text-2xl md:text-3xl font-bold text-innata-dark flex items-center gap-2">
-                    <span class="w-1.5 h-8 bg-innata-gold inline-block rounded-full"></span>
-                    Diccionario Interactivo de Rendimiento
+                    <i class="fa-solid fa-book-open text-innata-gold"></i>
+                    Diccionario Pedagógico de Indicadores Meta Ads
                 </h2>
                 <p class="text-gray-500 text-sm mt-1">
-                    Selecciona o explora cada indicador de tu informe de Meta Ads para entender exactamente qué significa para el éxito comercial de Innata.
+                    Haz clic en cualquiera de los indicadores técnicos para entender exactamente qué miden y cómo impactan las finanzas de Innata.
                 </p>
             </div>
 
-            <!-- Grid de Indicadores -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                
-                <!-- Lista de Indicadores -->
+                <!-- Selectores de Indicador -->
                 <div class="space-y-3">
-                    <!-- Indicador 1: Resultados -->
-                    <button onclick="selectMetric('resultados')" id="btn-resultados" class="metric-btn w-full text-left p-4 rounded-xl border border-innata-gold bg-innata-cream/30 hover:bg-innata-cream transition-all duration-200 flex items-center justify-between">
+                    <!-- Option 1: Conversiones WhatsApp -->
+                    <button onclick="selectMetric('conversaciones')" id="btn-conversaciones" class="metric-btn w-full text-left p-4 rounded-xl border border-innata-gold bg-innata-cream/40 hover:bg-innata-cream transition-all duration-200 flex items-center justify-between">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-full bg-emerald-100 text-innata-emerald flex items-center justify-center font-bold text-xs">01</span>
                             <div>
-                                <h4 class="font-semibold text-sm text-innata-dark">Resultados (Conversaciones)</h4>
-                                <span class="text-xs text-gray-400">Métrica de Éxito Primario</span>
+                                <h4 class="font-semibold text-sm text-innata-dark">Conversaciones a WhatsApp</h4>
+                                <span class="text-xs text-gray-400">Indicador Principal de Resultado</span>
                             </div>
                         </div>
-                        <span class="text-lg font-bold font-serif text-innata-emerald">64</span>
+                        <span class="text-base font-bold font-serif text-innata-emerald">166 Chats</span>
                     </button>
 
-                    <!-- Indicador 2: Costo por Resultado -->
+                    <!-- Option 2: Costo por Resultado -->
                     <button onclick="selectMetric('costo')" id="btn-costo" class="metric-btn w-full text-left p-4 rounded-xl border border-gray-200 hover:border-innata-gold hover:bg-innata-cream/20 transition-all duration-200 flex items-center justify-between">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-full bg-emerald-100 text-innata-emerald flex items-center justify-center font-bold text-xs">02</span>
                             <div>
-                                <h4 class="font-semibold text-sm text-innata-dark">Costo por Conversación</h4>
-                                <span class="text-xs text-gray-400">Eficiencia Económica</span>
+                                <h4 class="font-semibold text-sm text-innata-dark">Costo por Resultado (CPR)</h4>
+                                <span class="text-xs text-gray-400">Eficiencia Publicitaria</span>
                             </div>
                         </div>
-                        <span class="text-lg font-bold font-serif text-innata-emerald">$2.343</span>
+                        <span class="text-base font-bold font-serif text-innata-emerald">$2.753 COP</span>
                     </button>
 
-                    <!-- Indicador 3: Alcance (Reach) -->
-                    <button onclick="selectMetric('alcance')" id="btn-alcance" class="metric-btn w-full text-left p-4 rounded-xl border border-gray-200 hover:border-innata-gold hover:bg-innata-cream/20 transition-all duration-200 flex items-center justify-between">
+                    <!-- Option 3: Clasificacion de Calidad -->
+                    <button onclick="selectMetric('calidad')" id="btn-calidad" class="metric-btn w-full text-left p-4 rounded-xl border border-gray-200 hover:border-innata-gold hover:bg-innata-cream/20 transition-all duration-200 flex items-center justify-between">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-full bg-emerald-100 text-innata-emerald flex items-center justify-center font-bold text-xs">03</span>
                             <div>
-                                <h4 class="font-semibold text-sm text-innata-dark">Alcance (Reach)</h4>
-                                <span class="text-xs text-gray-400">Personas Únicas Impactadas</span>
+                                <h4 class="font-semibold text-sm text-innata-dark">Clasificación de Calidad Meta</h4>
+                                <span class="text-xs text-gray-400">Aprobación del Algoritmo</span>
                             </div>
                         </div>
-                        <span class="text-lg font-bold font-serif text-innata-emerald">6.941</span>
+                        <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded">Por encima del promedio</span>
                     </button>
 
-                    <!-- Indicador 4: Impresiones -->
-                    <button onclick="selectMetric('impresiones')" id="btn-impresiones" class="metric-btn w-full text-left p-4 rounded-xl border border-gray-200 hover:border-innata-gold hover:bg-innata-cream/20 transition-all duration-200 flex items-center justify-between">
+                    <!-- Option 4: Alcance vs Impresiones -->
+                    <button onclick="selectMetric('alcance')" id="btn-alcance" class="metric-btn w-full text-left p-4 rounded-xl border border-gray-200 hover:border-innata-gold hover:bg-innata-cream/20 transition-all duration-200 flex items-center justify-between">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-full bg-emerald-100 text-innata-emerald flex items-center justify-center font-bold text-xs">04</span>
                             <div>
-                                <h4 class="font-semibold text-sm text-innata-dark">Impresiones</h4>
-                                <span class="text-xs text-gray-400">Impactos Visuales Totales</span>
+                                <h4 class="font-semibold text-sm text-innata-dark">Alcance vs. Impresiones</h4>
+                                <span class="text-xs text-gray-400">Cobertura e Frecuencia</span>
                             </div>
                         </div>
-                        <span class="text-lg font-bold font-serif text-innata-emerald">11.475</span>
+                        <span class="text-base font-bold font-serif text-innata-emerald">25.280 personas</span>
                     </button>
 
-                    <!-- Indicador 5: Frecuencia (Cálculo derivado) -->
-                    <button onclick="selectMetric('frecuencia')" id="btn-frecuencia" class="metric-btn w-full text-left p-4 rounded-xl border border-gray-200 hover:border-innata-gold hover:bg-innata-cream/20 transition-all duration-200 flex items-center justify-between">
+                    <!-- Option 5: Visitas al Perfil -->
+                    <button onclick="selectMetric('visitas')" id="btn-visitas" class="metric-btn w-full text-left p-4 rounded-xl border border-gray-200 hover:border-innata-gold hover:bg-innata-cream/20 transition-all duration-200 flex items-center justify-between">
                         <div class="flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-emerald-100 text-innata-emerald flex items-center justify-center font-bold text-xs">05</span>
+                            <span class="w-8 h-8 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-xs">05</span>
                             <div>
-                                <h4 class="font-semibold text-sm text-innata-dark">Frecuencia de Anuncios</h4>
-                                <span class="text-xs text-gray-400">Repeticiones por Usuario</span>
+                                <h4 class="font-semibold text-sm text-innata-dark">Visitas al Perfil de Instagram</h4>
+                                <span class="text-xs text-gray-400">Estrategia de Branding</span>
                             </div>
                         </div>
-                        <span class="text-lg font-bold font-serif text-innata-emerald">1.65 veces</span>
+                        <span class="text-base font-bold font-serif text-purple-800">266 Visitas</span>
                     </button>
                 </div>
 
-                <!-- Panel Explicativo Detallado -->
-                <div id="explanation-panel" class="bg-innata-cream/40 border border-innata-gold/30 rounded-2xl p-6 flex flex-col justify-between">
+                <!-- Panel con Explicación Detallada -->
+                <div id="dict-panel" class="bg-innata-cream/50 border border-innata-gold/30 rounded-2xl p-6 flex flex-col justify-between">
                     <div>
-                        <!-- Header de Explicación -->
-                        <div class="flex items-center justify-between mb-4 border-b border-innata-gold/20 pb-3">
-                            <span id="expl-tag" class="text-xs uppercase tracking-widest font-semibold text-innata-goldDark">Métrica Seleccionada</span>
-                            <span id="expl-health" class="text-xs font-semibold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Óptimo
+                        <div class="flex items-center justify-between mb-3 border-b border-innata-gold/20 pb-3">
+                            <span id="dict-category" class="text-xs uppercase tracking-widest font-semibold text-innata-goldDark">Métrica de Conversión Directa</span>
+                            <span id="dict-badge" class="text-xs font-semibold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                                Diagnóstico: Desempeño Sobresaliente
                             </span>
                         </div>
-                        <h3 id="expl-title" class="font-serif text-2xl font-bold text-innata-dark mb-2">Resultados (Conversaciones)</h3>
-                        <p id="expl-value" class="text-4xl font-serif font-bold text-innata-emerald mb-4">64 Chats Iniciados</p>
-                        
-                        <!-- ¿Qué es? -->
-                        <div class="space-y-4">
+                        <h3 id="dict-title" class="font-serif text-2xl font-bold text-innata-dark mb-1">Conversaciones a WhatsApp</h3>
+                        <p id="dict-value" class="text-3xl font-serif font-bold text-innata-emerald mb-4">166 Prospectos Directos</p>
+
+                        <div class="space-y-4 text-xs leading-relaxed text-gray-600">
                             <div>
-                                <h5 class="text-xs uppercase tracking-wider font-semibold text-gray-400 mb-1">¿Qué es exactamente?</h5>
-                                <p id="expl-desc" class="text-sm text-gray-600 leading-relaxed">
-                                    Es el número de personas que, tras ver el anuncio en Instagram o Facebook, decidieron hacer clic activamente en el botón de llamado a la acción y enviaron un primer mensaje solicitando información sobre el tratamiento orofacial (Labios y Nariz).
+                                <h5 class="uppercase text-[10px] tracking-wider font-bold text-gray-400 mb-1">¿Qué es exactamente este indicador?</h5>
+                                <p id="dict-what">
+                                    Mide el número de personas reales que, tras ver la publicidad de Innata en Instagram o Facebook, presionaron el botón "Enviar mensaje" e iniciaron una conversación directa en la cuenta comercial de WhatsApp.
                                 </p>
                             </div>
-                            
-                            <!-- ¿Qué representa para Innata? -->
                             <div>
-                                <h5 class="text-xs uppercase tracking-wider font-semibold text-gray-400 mb-1">¿Qué representa para Innata?</h5>
-                                <p id="expl-business" class="text-sm text-gray-600 leading-relaxed">
-                                    No son solo clics vacíos o visualizaciones. Son **64 pacientes potenciales calificados** que están listos para ser atendidos por tu equipo comercial. Cada uno es una oportunidad real de agendamiento para una valoración estética presencial o virtual.
+                                <h5 class="uppercase text-[10px] tracking-wider font-bold text-gray-400 mb-1">¿Qué representa para el negocio de Innata?</h5>
+                                <p id="dict-business">
+                                    Representa **166 oportunidades de venta calificada** de personas interesadas en tratamientos de alto valor como Ojeras, Rinomodelación y Labios. No son likes ni clics vacíos; son contactos que están esperando agendar valoración.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Tip de acción -->
-                    <div class="mt-6 p-4 bg-white border border-innata-gold/20 rounded-xl">
-                        <div class="flex gap-2.5">
-                            <i class="fa-solid fa-lightbulb text-innata-gold mt-1"></i>
+                    <div class="mt-6 p-4 bg-white rounded-xl border border-innata-gold/30">
+                        <div class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-lightbulb text-innata-gold text-base mt-0.5"></i>
                             <div>
-                                <span class="text-xs font-bold text-innata-emerald block uppercase tracking-wider">Consejo de Oro para Innata:</span>
-                                <p id="expl-tip" class="text-xs text-gray-500 mt-0.5">
-                                    El 80% de las ventas en estética se definen en las primeras 2 horas de recibido el mensaje. Responde rápido y con un guion estructurado que ofrezca agendar directamente una cita de valoración.
+                                <span class="text-[10px] uppercase font-bold text-innata-emerald tracking-wider block">Recomendación Clave:</span>
+                                <p id="dict-tip" class="text-xs text-gray-600 mt-0.5">
+                                    El cierre de estas conversaciones depende del tiempo de respuesta. Si respondes en menos de 15 minutos con fotos del doctor y facilidad de agendas, la tasa de agendamiento supera el 20%.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Visualización en embudo de cómo bajan los clientes potenciales -->
-        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
-            
-            <!-- Embudo de Conversión -->
-            <div class="bg-white rounded-2xl p-6 md:p-8 card-shadow border border-gray-100 lg:col-span-2">
-                <div class="border-b border-gray-200 pb-5 mb-6">
-                    <h2 class="font-serif text-2xl font-bold text-innata-dark flex items-center gap-2">
-                        <i class="fa-solid fa-filter text-innata-gold text-lg"></i>
-                        Embudo de Adquisición de Pacientes
-                    </h2>
-                    <p class="text-gray-500 text-sm mt-1">
-                        De la visibilidad masiva al contacto personalizado. Así se comportaron tus anuncios.
-                    </p>
-                </div>
-
-                <!-- Diseño del Embudo -->
-                <div class="space-y-6">
-                    <!-- Paso 1: Impresiones -->
-                    <div>
-                        <div class="flex justify-between items-center text-xs font-semibold mb-2">
-                            <span class="text-gray-500 flex items-center gap-1.5">
-                                <span class="w-2.5 h-2.5 bg-innata-emerald/30 rounded-full"></span>
-                                1. Impresiones (Impactos Totales)
-                            </span>
-                            <span class="text-innata-emerald">11.475 veces mostrado</span>
-                        </div>
-                        <div class="w-full bg-gray-100 h-8 rounded-lg overflow-hidden flex">
-                            <div class="bg-gradient-to-r from-innata-emerald to-emerald-800 text-white font-medium text-xs flex items-center px-3 justify-between transition-all duration-1000" style="width: 100%">
-                                <span>100% Exposición Visual</span>
-                            </div>
-                        </div>
-                        <p class="text-xs text-gray-400 mt-1">Cantidad de veces que tus anuncios aparecieron en la pantalla de los usuarios de tu zona segmentada.</p>
-                    </div>
-
-                    <!-- Paso 2: Alcance -->
-                    <div>
-                        <div class="flex justify-between items-center text-xs font-semibold mb-2">
-                            <span class="text-gray-500 flex items-center gap-1.5">
-                                <span class="w-2.5 h-2.5 bg-innata-sage rounded-full"></span>
-                                2. Alcance (Personas Únicas)
-                            </span>
-                            <span class="text-innata-emerald">6.941 personas</span>
-                        </div>
-                        <div class="w-full bg-gray-100 h-8 rounded-lg overflow-hidden flex">
-                            <div class="bg-gradient-to-r from-innata-sage to-[#7C9688] text-white font-medium text-xs flex items-center px-3 justify-between transition-all duration-1000" style="width: 60.5%">
-                                <span>60.5% del total</span>
-                            </div>
-                        </div>
-                        <p class="text-xs text-gray-400 mt-1">Personas únicas e individuales que vieron tu publicidad. En promedio, cada una vio el anuncio 1.65 veces.</p>
-                    </div>
-
-                    <!-- Paso 3: Conversión de Chats -->
-                    <div>
-                        <div class="flex justify-between items-center text-xs font-semibold mb-2">
-                            <span class="text-gray-500 flex items-center gap-1.5">
-                                <span class="w-2.5 h-2.5 bg-innata-gold rounded-full"></span>
-                                3. Conversaciones Iniciadas (Leads de alto interés)
-                            </span>
-                            <span class="text-innata-goldDark font-bold">64 Leads calificados</span>
-                        </div>
-                        <div class="w-full bg-gray-100 h-8 rounded-lg overflow-hidden flex">
-                            <!-- Escalado artificial para visibilidad -->
-                            <div class="bg-gradient-to-r from-innata-gold to-yellow-600 text-white font-medium text-xs flex items-center px-3 justify-between transition-all duration-1000" style="width: 15%">
-                                <span>0.92% Conversión</span>
-                            </div>
-                        </div>
-                        <p class="text-xs text-gray-400 mt-1">Tasa de conversión sobre alcance. Es un porcentaje sumamente óptimo para campañas estéticas premium de conversión directa.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Por qué es altamente rentable esta campaña -->
-            <div class="bg-innata-dark text-white rounded-2xl p-6 md:p-8 card-shadow flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute right-0 bottom-0 w-48 h-48 bg-innata-gold opacity-10 rounded-full blur-2xl"></div>
-                
-                <div>
-                    <h3 class="font-serif text-xl font-semibold text-innata-gold mb-3">Diagnóstico Experto</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed mb-4">
-                        "La campaña orientada a **Labios y Nariz** demuestra un gran acierto estratégico. El costo por mensaje de <strong class="text-white">$2.343</strong> es sumamente competitivo considerando el ticket promedio del mercado orofacial."
-                    </p>
-                    
-                    <ul class="space-y-3.5 text-xs text-gray-300">
-                        <li class="flex gap-2">
-                            <i class="fa-solid fa-circle-check text-innata-gold mt-0.5"></i>
-                            <span><strong>Frecuencia Saludable:</strong> Con 1.65 de frecuencia el anuncio se recordó bien sin llegar a cansar a tu audiencia local.</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <i class="fa-solid fa-circle-check text-innata-gold mt-0.5"></i>
-                            <span><strong>Público Objetivo Preciso:</strong> Alta afinidad en la segmentación geográfica alrededor de la clínica estética.</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <i class="fa-solid fa-circle-check text-innata-gold mt-0.5"></i>
-                            <span><strong>Control de Costos:</strong> Se maximizó el gasto sin sobrepasar un solo peso el presupuesto original de $150.000.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="mt-6 border-t border-white/10 pt-4 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-innata-gold/20 flex items-center justify-center text-innata-gold">
-                        <i class="fa-solid fa-gauge-high"></i>
-                    </div>
-                    <div>
-                        <span class="text-[10px] text-innata-sage block uppercase tracking-wider">Health Score General</span>
-                        <span class="text-sm font-semibold text-white">9.4 / 10 • Excelente</span>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Herramienta dinámica para simular conversiones de venta real -->
-        <section class="bg-gradient-to-br from-white to-innata-cream/40 rounded-2xl p-6 md:p-8 card-shadow mb-10 border border-innata-gold/20">
+        <!-- Simulador de ROI Multi-Tratamiento -->
+        <section class="bg-gradient-to-br from-white via-innata-cream/30 to-white rounded-2xl p-6 md:p-8 card-shadow mb-10 border border-innata-gold/30">
             <div class="border-b border-gray-200 pb-5 mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                 <div>
                     <h2 class="font-serif text-2xl md:text-3xl font-bold text-innata-dark flex items-center gap-2">
                         <i class="fa-solid fa-calculator text-innata-gold"></i>
-                        Simulador de Conversión y Retorno de Inversión (ROI)
+                        Simulador de Ventas y Retorno de Inversión (ROI)
                     </h2>
                     <p class="text-gray-500 text-sm mt-1">
-                        Ajusta los controles para estimar los ingresos reales generados por estos **64 chats** según tu tasa de cierre en clínica.
+                        Proyecta las ventas reales de la clínica basadas en los **166 chats de WhatsApp** generados en la campaña publicitaria.
                     </p>
                 </div>
-                <div class="bg-innata-emerald text-white px-4 py-2 rounded-xl text-xs font-semibold self-start md:self-center">
-                    Simulación de Negocio Real
+                <div class="bg-innata-dark text-white px-4 py-2 rounded-xl text-xs font-semibold self-start md:self-center flex items-center gap-2">
+                    <i class="fa-solid fa-chart-pie text-innata-gold"></i>
+                    Inversión Analizada: $456.750 COP
                 </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Controles del Simulador -->
-                <div class="space-y-6 bg-white p-6 rounded-xl border border-gray-100 lg:col-span-1">
-                    <!-- Ticket Promedio por Tratamiento -->
+                <div class="space-y-5 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm lg:col-span-1">
+                    <!-- Ticket Promedio Tratamientos -->
                     <div>
-                        <label class="block text-xs font-bold uppercase text-gray-500 tracking-wider mb-2">
-                            Valor Ticket Promedio ($)
+                        <label class="block text-xs font-bold uppercase text-gray-600 tracking-wider mb-2">
+                            Ticket Promedio por Paciente ($ COP)
                         </label>
                         <div class="relative">
                             <span class="absolute left-3 top-3 text-gray-400 text-sm">$</span>
-                            <input type="number" id="ticket-val" value="650000" oninput="calculateROI()" 
-                                class="w-full bg-gray-50 border border-gray-200 rounded-lg py-2.5 pl-7 pr-3 text-sm font-semibold text-innata-dark focus:ring-2 focus:ring-innata-gold focus:outline-none">
+                            <input type="number" id="sim-ticket" value="750000" step="50000" oninput="calculateGlobalROI()" 
+                                class="w-full bg-gray-50 border border-gray-200 rounded-xl py-2.5 pl-7 pr-3 text-sm font-semibold text-innata-dark focus:ring-2 focus:ring-innata-gold focus:outline-none">
                         </div>
-                        <span class="text-[10px] text-gray-400 mt-1 block">Ejemplo: Costo promedio de Ácido Hialurónico en labios/nariz.</span>
+                        <span class="text-[10px] text-gray-400 mt-1 block">Promedio entre Relleno de Ojeras, Rinomodelación y Labios.</span>
                     </div>
 
-                    <!-- Tasa de Conversión de Chat a Paciente Agenda -->
+                    <!-- Tasa de Cierre Comercial -->
                     <div>
-                        <div class="flex justify-between text-xs font-bold uppercase text-gray-500 tracking-wider mb-2">
-                            <span>Tasa de Cierre Comercial</span>
-                            <span id="rate-display" class="text-innata-goldDark font-bold text-sm">15%</span>
+                        <div class="flex justify-between text-xs font-bold uppercase text-gray-600 tracking-wider mb-2">
+                            <span>Tasa de Cierre de WhatsApp</span>
+                            <span id="sim-rate-text" class="text-innata-emerald font-bold text-sm">12%</span>
                         </div>
-                        <input type="range" id="conversion-rate" min="5" max="50" value="15" oninput="calculateROI()" 
-                            class="w-full accent-innata-gold h-1.5 bg-gray-200 rounded-lg cursor-pointer">
+                        <input type="range" id="sim-rate" min="3" max="40" value="12" oninput="calculateGlobalROI()" 
+                            class="w-full accent-innata-gold h-2 bg-gray-200 rounded-lg cursor-pointer">
                         <div class="flex justify-between text-[10px] text-gray-400 mt-1">
-                            <span>5% (Conservador)</span>
-                            <span>50% (Súper Vendedor)</span>
+                            <span>3% (Bajo)</span>
+                            <span>12% (Promedio)</span>
+                            <span>40% (Excelente)</span>
                         </div>
-                        <p class="text-[10px] text-gray-400 mt-2">¿De cada 100 conversaciones de WhatsApp cuántas agendan tratamiento pagado?</p>
                     </div>
 
-                    <!-- Botón para Reiniciar Valores -->
-                    <button onclick="resetSimulator()" class="w-full border border-gray-200 hover:border-innata-gold text-xs font-semibold text-gray-500 hover:text-innata-dark py-2.5 rounded-lg transition-colors">
-                        Restaurar Valores Sugeridos
+                    <!-- Botón Restablecer -->
+                    <button onclick="resetROI()" class="w-full border border-gray-200 hover:border-innata-gold text-xs font-semibold text-gray-600 hover:text-innata-dark py-2.5 rounded-xl transition-colors">
+                        Restablecer Valores Promedio
                     </button>
                 </div>
 
-                <!-- Métricas Calculadas del Retorno de Inversión -->
+                <!-- Resultados Proyectados del Simulador -->
                 <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <!-- Clientes Agendados Estimados -->
-                    <div class="bg-innata-emerald text-white rounded-xl p-6 flex flex-col justify-between shadow-md">
+                    <!-- Card 1: Pacientes Agendados -->
+                    <div class="bg-innata-emerald text-white rounded-2xl p-6 flex flex-col justify-between shadow-md relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-white/5 rounded-full blur-xl"></div>
                         <div>
-                            <span class="text-innata-sage text-xs uppercase tracking-wider font-semibold">Pacientes Agendados</span>
-                            <h4 id="calc-patients" class="text-5xl font-serif font-bold text-innata-gold my-2">9.6</h4>
-                            <p class="text-xs text-gray-300">Nuevos pacientes proyectados en base a las 64 conversaciones recibidas.</p>
+                            <span class="text-innata-sage text-xs uppercase tracking-wider font-semibold">Pacientes Nuevos Agendados</span>
+                            <h4 id="sim-patients" class="text-5xl font-serif font-bold text-innata-gold my-2">19.9</h4>
+                            <p class="text-xs text-gray-300">Estimación de pacientes que pagan tratamiento completo a partir de los 166 chats.</p>
                         </div>
-                        <span class="text-[10px] text-emerald-300 border-t border-emerald-800 pt-3 mt-4">CAC Estimado (Costo de adquisición de cliente): <span id="calc-cac">$15.618</span></span>
-                    </div>
-
-                    <!-- Ingresos Totales Estimados -->
-                    <div class="bg-white border border-gray-100 rounded-xl p-6 flex flex-col justify-between card-shadow">
-                        <div>
-                            <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Ingresos Totales</span>
-                            <h4 id="calc-revenue" class="text-4xl font-serif font-bold text-innata-dark my-2 text-emerald-950">$6.240.000</h4>
-                            <p class="text-xs text-gray-500">Estimación de facturación bruta directo a la clínica.</p>
-                        </div>
-                        <div class="border-t border-gray-100 pt-3 mt-4 flex justify-between items-center">
-                            <span class="text-[10px] text-gray-400">Inversión Publicitaria: <strong>$149.940</strong></span>
-                            <span id="calc-roas" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">ROAS: 41.6x</span>
+                        <div class="border-t border-emerald-800/80 pt-3 mt-4 text-[11px] text-emerald-200 flex justify-between">
+                            <span>Costo Adquisición Cliente (CAC):</span>
+                            <strong id="sim-cac" class="text-white font-bold">$22.929 COP</strong>
                         </div>
                     </div>
 
-                    <!-- Retorno Neto de la Inversión -->
-                    <div class="bg-white border border-gray-100 rounded-xl p-6 flex flex-col justify-between card-shadow sm:col-span-2">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                            <div>
-                                <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Retorno Neto (Ganancia Estimada)</span>
-                                <h4 id="calc-net" class="text-4xl font-serif font-bold text-emerald-700 my-1">$6.090.060</h4>
-                                <p class="text-xs text-gray-500">Ingresos brutos proyectados restando los $149.940 invertidos en publicidad.</p>
-                            </div>
-                            <div class="bg-innata-cream border border-innata-gold/30 rounded-lg p-3 text-center sm:min-w-[150px]">
-                                <span class="text-[10px] text-innata-goldDark block uppercase tracking-wider font-semibold">Retorno Neto ROI</span>
-                                <span id="calc-roi" class="text-xl font-bold text-innata-emerald">4,061.6%</span>
-                            </div>
+                    <!-- Card 2: Ingreso Bruto Proyectado -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col justify-between card-shadow">
+                        <div>
+                            <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Ingresos Brutos Estimados</span>
+                            <h4 id="sim-revenue" class="text-4xl font-serif font-bold text-innata-dark my-2">$14.940.000</h4>
+                            <p class="text-xs text-gray-500">Facturación directa a la clínica Innata Belleza & Longevidad.</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3 mt-4 flex justify-between items-center text-xs">
+                            <span class="text-gray-400">Publicidad Invertida: <strong>$456.750 COP</strong></span>
+                            <span id="sim-roas" class="bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded font-bold">ROAS: 32.7x</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Ganancia Neta Estimada -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-center card-shadow sm:col-span-2 gap-4">
+                        <div>
+                            <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Retorno Neto (Ganancia Estimada)</span>
+                            <h4 id="sim-net" class="text-4xl font-serif font-bold text-emerald-800 my-1">$14.483.250</h4>
+                            <p class="text-xs text-gray-500">Ingresos brutos descontando los $456.750 COP invertidos en anuncios.</p>
+                        </div>
+                        <div class="bg-innata-cream border border-innata-gold/40 rounded-xl p-4 text-center min-w-[170px]">
+                            <span class="text-[10px] text-innata-goldDark uppercase tracking-wider font-bold block">Rentabilidad ROI</span>
+                            <span id="sim-roi" class="text-2xl font-bold text-innata-emerald">3.170,9%</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Recomendaciones enfocadas al nicho de medicina estética -->
+        <!-- Estrategia y Recomendaciones Ejecutivas -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
-            <!-- Columna de Recomendaciones Estéticas -->
+            <!-- Recomendaciones Prácticas -->
             <div class="bg-white rounded-2xl p-6 md:p-8 card-shadow border border-gray-100 lg:col-span-2">
-                <h3 class="font-serif text-2xl font-bold text-innata-dark mb-2">
-                    Estrategias Prácticas para Innata
+                <h3 class="font-serif text-2xl font-bold text-innata-dark mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-compass text-innata-gold"></i>
+                    Plan Estratégico de Optimización Publicitaria
                 </h3>
-                <p class="text-sm text-gray-500 mb-6">¿Cómo podemos potenciar aún más estos excelentes resultados en la próxima campaña?</p>
-                
-                <div class="space-y-5">
-                    <!-- Estrategia 1 -->
-                    <div class="flex gap-4 p-4 hover:bg-innata-cream/20 rounded-xl transition-all duration-200">
-                        <div class="w-10 h-10 rounded-lg bg-innata-cream flex items-center justify-center text-innata-gold shrink-0">
-                            <i class="fa-solid fa-camera-retro text-lg"></i>
+                <p class="text-sm text-gray-500 mb-6">Plan de acción basado en los datos exactos reportados en las campañas.</p>
+
+                <div class="space-y-4">
+                    <!-- Punto 1: Maximizar Ojeras -->
+                    <div class="flex gap-4 p-4 bg-emerald-50/30 rounded-xl border border-emerald-100">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-bold">
+                            1
                         </div>
                         <div>
-                            <h4 class="font-semibold text-sm text-innata-dark">Uso estricto de Videos "Antes & Después" reales</h4>
+                            <h4 class="font-semibold text-sm text-innata-dark">Redireccionar el 60% del presupuesto al tratamiento de Ojeras</h4>
                             <p class="text-xs text-gray-600 mt-1 leading-relaxed">
-                                En tratamientos de labios y nariz, la confianza es vital. El contenido que muestra el procedimiento en tiempo real y el cambio inmediato genera hasta un 45% más clics calificados que las imágenes estáticas.
+                                Ojeras es el indiscutible ganador en volumen y costo por mensaje ($2.250 a $2.740 COP) con calificación "Por encima del promedio" de Meta. Recomendamos escalar este anuncio para captar más mercado.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Estrategia 2 -->
-                    <div class="flex gap-4 p-4 hover:bg-innata-cream/20 rounded-xl transition-all duration-200">
-                        <div class="w-10 h-10 rounded-lg bg-innata-cream flex items-center justify-center text-innata-gold shrink-0">
-                            <i class="fa-solid fa-comments-dollar text-lg"></i>
+                    <!-- Punto 2: Reestructurar Labios -->
+                    <div class="flex gap-4 p-4 bg-amber-50/30 rounded-xl border border-amber-100">
+                        <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 font-bold">
+                            2
                         </div>
                         <div>
-                            <h4 class="font-semibold text-sm text-innata-dark">Atención Comercial Express (Script de WhatsApp)</h4>
+                            <h4 class="font-semibold text-sm text-innata-dark">Rediseñar creativos para Relleno de Labios</h4>
                             <p class="text-xs text-gray-600 mt-1 leading-relaxed">
-                                Implementa respuestas rápidas guardadas en WhatsApp Business que incluyan fotos de alta calidad de casos de éxito y ofrece un "Cupón de Valoración de Cortesía" válido solo por las siguientes 48 horas para forzar agendamiento rápido.
+                                El anuncio de Labios tiene un costo por chat de $5.451 COP (más del doble que Ojeras). Se sugiere pausar las imágenes actuales y probar videos de aplicación en vivo o testimonios de pacientes reales.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Estrategia 3 -->
-                    <div class="flex gap-4 p-4 hover:bg-innata-cream/20 rounded-xl transition-all duration-200">
-                        <div class="w-10 h-10 rounded-lg bg-innata-cream flex items-center justify-center text-innata-gold shrink-0">
-                            <i class="fa-solid fa-arrows-spin text-lg"></i>
+                    <!-- Punto 3: Retargeting Radiesse -->
+                    <div class="flex gap-4 p-4 bg-purple-50/30 rounded-xl border border-purple-100">
+                        <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center shrink-0 font-bold">
+                            3
                         </div>
                         <div>
-                            <h4 class="font-semibold text-sm text-innata-dark">Estrategia de Retargeting de Audiencia</h4>
+                            <h4 class="font-semibold text-sm text-innata-dark">Aprovechar las 258 visitas generadas por Radiesse</h4>
                             <p class="text-xs text-gray-600 mt-1 leading-relaxed">
-                                Crea una campaña exclusiva de "Seguimiento" dirigida solo a personas que vieron más del 50% de los videos anteriores o interactuaron pero no escribieron, dándoles el último empujón de confianza con testimonios de pacientes reales.
+                                El video de Radiesse logró 258 visitas al Instagram por solo $143 COP. Crearemos un público personalizado de retargeting para mostrarles anuncios directos a WhatsApp ofreciendo valoración.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Columna de Conclusión Ejecutiva -->
-            <div class="bg-innata-cream/40 rounded-2xl p-6 md:p-8 border border-innata-gold/30 flex flex-col justify-between">
+            <!-- Diagnóstico del Experto -->
+            <div class="bg-innata-dark text-white rounded-2xl p-6 md:p-8 card-shadow flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute right-0 bottom-0 w-48 h-48 bg-innata-gold opacity-10 rounded-full blur-2xl"></div>
+
                 <div>
-                    <span class="text-xs uppercase tracking-widest font-semibold text-innata-goldDark block mb-2">Conclusión del Experto</span>
-                    <h4 class="font-serif text-xl font-bold text-innata-dark mb-3">Campaña Altamente Exitosa</h4>
-                    <p class="text-xs text-gray-600 leading-relaxed mb-4">
-                        Con solo **$149.940** de inversión, lograr conectar con **64 personas reales** dispuestas a chatear sobre procedimientos cosméticos de alto valor representa un costo de adquisición por lead sumamente óptimo.
+                    <span class="text-xs uppercase tracking-widest text-innata-gold font-semibold block mb-2">Conclusión Ejecutiva</span>
+                    <h4 class="font-serif text-xl font-bold text-white mb-3">Campaña de Alta Rentabilidad</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                        Con solo **$496.098 COP** invertidos, lograr **166 contactos directos a WhatsApp** representa un desempeño publicitario sobresaliente en el nicho de medicina estética médica de Colombia.
                     </p>
-                    <p class="text-xs text-gray-600 leading-relaxed">
-                        Innata Belleza & Longevidad tiene en sus manos una gran oportunidad comercial para capitalizar estos prospectos y posicionarse como la clínica de medicina estética de referencia en la región orofacial.
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        El costo promedio de **$2.753 COP por chat interesado** permite a Innata Belleza & Longevidad obtener retornos superiores al 2.000% si mantiene una gestión comercial oportuna.
                     </p>
                 </div>
 
-                <div class="mt-6 border-t border-innata-gold/20 pt-4 text-center">
-                    <p class="text-[10px] text-gray-400">Informe Generado Exclusivamente para</p>
-                    <p class="text-xs font-serif font-semibold text-innata-dark">Innata Belleza & Longevidad</p>
+                <div class="mt-6 border-t border-white/10 pt-4 text-center">
+                    <p class="text-[10px] text-innata-sage uppercase tracking-wider">Informe preparado para</p>
+                    <p class="text-sm font-serif font-bold text-innata-gold">Innata Belleza & Longevidad</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer Simple -->
+    <!-- Footer -->
     <footer class="bg-innata-dark text-white py-8 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 text-center text-xs text-innata-sage">
             <p>© 2026 Innata Belleza & Longevidad. Todos los derechos reservados.</p>
-            <p class="mt-1">Analíticas basadas en datos reales del panel de administración de Meta Ads</p>
+            <p class="mt-1 text-gray-500">Informe desarrollado sobre datos consolidados de Meta Ads Manager</p>
         </div>
     </footer>
 
-    <!-- Scripts para interactividad y simulación dinámica de datos -->
+    <!-- Scripts de Interactividad y Cálculos Dinámicos -->
     <script>
-        // Datos detallados de las métricas en un objeto estructurado
-        const metricsData = {
-            resultados: {
-                title: "Resultados (Conversaciones)",
-                value: "64 Chats Iniciados",
-                desc: "Es el número de personas que, tras ver el anuncio en Instagram o Facebook, decidieron hacer clic activamente en el botón de llamado a la acción y enviaron un primer mensaje solicitando información sobre el tratamiento orofacial (Labios y Nariz).",
-                business: "No son solo clics vacíos o visualizaciones. Son <strong>64 pacientes potenciales calificados</strong> que están listos para ser atendidos por tu equipo comercial. Cada uno es una oportunidad real de agendamiento para una valoración estética presencial.",
-                tip: "El 80% de las ventas en estética se definen en las primeras 2 horas de recibido el mensaje. Responde rápido y con un guion estructurado que ofrezca agendar directamente.",
-                health: "Excelente",
-                healthClass: "text-emerald-800 bg-emerald-100"
+        // Data del Diccionario de Indicadores
+        const dictData = {
+            conversaciones: {
+                title: "Conversaciones a WhatsApp",
+                value: "166 Leads Interesados",
+                category: "Métrica de Conversión Directa",
+                what: "Es el número de usuarios que interactuaron con el anuncio y abrieron una ventana de chat directo en el WhatsApp Business de la clínica.",
+                business: "Representa 166 personas reales que preguntaron explícitamente por precios o citas para tratamientos como Ojeras, Nariz y Labios. Es el motor principal de facturación.",
+                tip: "Un protocolo de respuesta rápida (menor a 15 minutos) con mensajes de audio personalizados incrementa hasta un 30% los agendamientos finales.",
+                badge: "Diagnóstico: Desempeño Sobresaliente",
+                badgeClass: "text-emerald-800 bg-emerald-100"
             },
             costo: {
-                title: "Costo por Resultado",
-                value: "$2.343 por Conversación",
-                desc: "Representa el costo promedio de inversión publicitaria por cada cliente potencial que abre un chat contigo en WhatsApp o Messenger a través de tus anuncios.",
-                business: "Lograr un costo de adquisición de lead calificado por menos de $2.500 en tratamientos estéticos premium (que cuestan cientos de miles de pesos) ofrece un <strong>margen de rentabilidad brutalmente alto</strong> para Innata.",
-                tip: "Sigue utilizando formatos de anuncios atractivos que filtren bien desde la imagen para evitar chats de curiosos sin presupuesto. Tu costo es perfecto para escalar el presupuesto.",
-                health: "Costo Óptimo",
-                healthClass: "text-emerald-800 bg-emerald-100"
+                title: "Costo por Resultado (CPR)",
+                value: "$2.753 COP / Chat",
+                category: "Métrica de Eficiencia Económica",
+                what: "Es la cantidad promedio de presupuesto gastado por Meta Ads para conseguir que una persona escriba a WhatsApp.",
+                business: "Con un costo de $2.753 COP por lead y un tratamiento promedio de $750.000 COP, el margen publicitario es extraordinariamente favorable para la clínica.",
+                tip: "Mantén este costo bajo un umbral de $4.000 COP. Si un anuncio supera los $5.000 COP (como ocurrió en Labios), es momento de pausarlo y probar nuevos videos.",
+                badge: "Diagnóstico: Costo Súper Eficiente",
+                badgeClass: "text-emerald-800 bg-emerald-100"
+            },
+            calidad: {
+                title: "Clasificación de Calidad Meta",
+                value: "Por Encima del Promedio",
+                category: "Evaluación del Algoritmo",
+                what: "Diagnóstico interno de Meta que compara la calidad percibida de tu anuncio frente a anuncios similares orientados al mismo público objetivo.",
+                business: "Anuncios como 'Campaña #2 - Ojeras' y 'Campaña #4 - Ojeras' obtuvieron la máxima calificación. Meta premia esto cobrando menos por cada clic.",
+                tip: "Aprovecha que los anuncios de Ojeras tienen esta calificación para subirles el presupuesto sin temor a que se encarezca el mensaje.",
+                badge: "Diagnóstico: Algoritmo Satisfecho",
+                badgeClass: "text-emerald-800 bg-emerald-100"
             },
             alcance: {
-                title: "Alcance (Reach)",
-                value: "6.941 Personas Únicas",
-                desc: "El número de personas únicas e individuales (cuentas únicas de Meta) que vieron tu anuncio por lo menos una vez en su feed, historias o reels.",
-                business: "Significa que has posicionado y dado a conocer la marca Innata Belleza & Longevidad ante casi <strong>7.000 personas de alto interés</strong> en tu rango de ubicación local, creando reconocimiento de marca premium.",
-                tip: "La geolocalización es clave. Asegúrate de enfocar estos anuncios en un radio de 5 a 10 km máximo alrededor de la clínica para captar personas que de verdad viajen a atenderse contigo.",
-                health: "Saludable",
-                healthClass: "text-emerald-800 bg-emerald-100"
+                title: "Alcance vs. Impresiones",
+                value: "25.280 Personas Únicas",
+                category: "Métrica de Cobertura y Posicionamiento",
+                what: "El Alcance (25.280) indica cuántas personas distintas vieron el anuncio. Las Impresiones (37.788) indican cuántas veces en total se mostró.",
+                business: "La relación da una frecuencia saludable de 1,49 veces por persona. Significa que el público vio la marca lo suficiente para recordarla sin llegar a saturarse.",
+                tip: "Mantén las campañas locales dentro de un radio de 5 a 10 km de la clínica para garantizar que los alcanzados vivan cerca y puedan asistir a la cita.",
+                badge: "Diagnóstico: Cobertura Saludable",
+                badgeClass: "text-emerald-800 bg-emerald-100"
             },
-            impresiones: {
-                title: "Impresiones Totales",
-                value: "11.475 Visualizaciones",
-                desc: "La cantidad total de veces que tus anuncios aparecieron en pantalla. Un mismo usuario pudo haber visto el anuncio varias veces en diferentes días.",
-                business: "Esta métrica alimenta la familiaridad de marca. Los pacientes de medicina estética usualmente necesitan <strong>ver un anuncio varias veces</strong> antes de ganar la confianza necesaria para iniciar una plática.",
-                tip: "Las impresiones altas combinadas con un costo por resultado bajo nos indican que el arte y el texto del anuncio eran altamente llamativos y relevantes para la audiencia.",
-                health: "Normal",
-                healthClass: "text-blue-800 bg-blue-100"
-            },
-            frecuencia: {
-                title: "Frecuencia de Anuncios",
-                value: "1.65 veces visto",
-                desc: "Es el promedio de veces que cada persona única vio tu anuncio (Impresiones divididas entre el Alcance: 11.475 / 6.941).",
-                business: "Una frecuencia de 1.65 es <strong>absolutamente perfecta</strong>. Indica que tus anuncios se mostraron lo suficiente para que la gente los recordara, pero sin llegar a cansar, saturar o desgastar a la audiencia.",
-                tip: "Mantén vigilada la frecuencia si decides aumentar el presupuesto. Si llega a superar un 3.5 en una campaña local, es momento de cambiar las fotos o creativos de los anuncios.",
-                health: "Saludable",
-                healthClass: "text-emerald-800 bg-emerald-100"
+            visitas: {
+                title: "Visitas al Perfil de Instagram",
+                value: "266 Visitas Generadas",
+                category: "Métrica de Branding & Nutrición",
+                what: "Cantidad de usuarios que entraron a explorar el perfil oficial de Instagram de Innata tras ver el video publicitario.",
+                business: "A solo $147,92 COP por visita, el 'Video Radiesse' fue una herramienta económica para ganar seguidores locales y posicionar al equipo médico.",
+                tip: "Asegúrate de que las historias destacadas de Instagram muestren fotos de la clínica, testimonios y certificados para convertir a estos visitantes en pacientes.",
+                badge: "Diagnóstico: Gran Atracción de Marca",
+                badgeClass: "text-purple-800 bg-purple-100"
             }
         };
 
-        // Función para cambiar la métrica activa en el diccionario
-        function selectMetric(metricKey) {
-            // Remover estilos activos de todos los botones
+        // Función para cambiar vista entre Tabla de Campañas y Anuncios
+        function switchTableView(view) {
+            const campaignsTable = document.getElementById('table-campaigns-view');
+            const adsTable = document.getElementById('table-ads-view');
+            const btnCampaigns = document.getElementById('tab-btn-campaigns');
+            const btnAds = document.getElementById('tab-btn-ads');
+
+            if (view === 'campaigns') {
+                campaignsTable.classList.remove('hidden');
+                adsTable.classList.add('hidden');
+                btnCampaigns.className = "px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200 bg-white text-innata-dark shadow-sm";
+                btnAds.className = "px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200 text-gray-500 hover:text-innata-dark";
+            } else {
+                campaignsTable.classList.add('hidden');
+                adsTable.classList.remove('hidden');
+                btnAds.className = "px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200 bg-white text-innata-dark shadow-sm";
+                btnCampaigns.className = "px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200 text-gray-500 hover:text-innata-dark";
+            }
+        }
+
+        // Seleccionar métrica en el diccionario
+        function selectMetric(key) {
             document.querySelectorAll('.metric-btn').forEach(btn => {
-                btn.classList.remove('border-innata-gold', 'bg-innata-cream/30');
+                btn.classList.remove('border-innata-gold', 'bg-innata-cream/40');
                 btn.classList.add('border-gray-200');
             });
 
-            // Añadir estilos activos al botón seleccionado
-            const activeBtn = document.getElementById(`btn-${metricKey}`);
+            const activeBtn = document.getElementById(`btn-${key}`);
             if (activeBtn) {
                 activeBtn.classList.remove('border-gray-200');
-                activeBtn.classList.add('border-innata-gold', 'bg-innata-cream/30');
+                activeBtn.classList.add('border-innata-gold', 'bg-innata-cream/40');
             }
 
-            // Actualizar datos en el panel de detalle
-            const data = metricsData[metricKey];
-            document.getElementById('expl-title').innerHTML = data.title;
-            document.getElementById('expl-value').innerHTML = data.value;
-            document.getElementById('expl-desc').innerHTML = data.desc;
-            document.getElementById('expl-business').innerHTML = data.business;
-            document.getElementById('expl-tip').innerHTML = data.tip;
+            const data = dictData[key];
+            document.getElementById('dict-title').innerText = data.title;
+            document.getElementById('dict-value').innerText = data.value;
+            document.getElementById('dict-category').innerText = data.category;
+            document.getElementById('dict-what').innerText = data.what;
+            document.getElementById('dict-business').innerText = data.business;
+            document.getElementById('dict-tip').innerText = data.tip;
             
-            // Actualizar semáforo de salud
-            const healthEl = document.getElementById('expl-health');
-            healthEl.className = `text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1 ${data.healthClass}`;
-            healthEl.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${metricKey === 'impresiones' ? 'bg-blue-500' : 'bg-emerald-500'}"></span> ${data.health}`;
+            const badgeEl = document.getElementById('dict-badge');
+            badgeEl.innerText = data.badge;
+            badgeEl.className = `text-xs font-semibold px-2.5 py-0.5 rounded-full ${data.badgeClass}`;
         }
 
-        // Lógica de cálculo dinámico para el Simulador de ROI
-        function calculateROI() {
-            const ticketVal = parseFloat(document.getElementById('ticket-val').value) || 0;
-            const conversionRate = parseFloat(document.getElementById('conversion-rate').value) || 0;
-            const totalLeads = 64; // Estático del informe real
-            const totalSpend = 149940; // Estático de inversión de campaña real
+        // Lógica de cálculo dinámico para el Simulador de ROI Global
+        function calculateGlobalROI() {
+            const ticket = parseFloat(document.getElementById('sim-ticket').value) || 0;
+            const rate = parseFloat(document.getElementById('sim-rate').value) || 0;
+            const totalLeads = 166;
+            const messagingSpend = 456750; // Total gastado en mensajes WhatsApp (excluyendo branding visitas)
 
-            // Actualizar display de tasa de conversión
-            document.getElementById('rate-display').innerText = `${conversionRate}%`;
+            document.getElementById('sim-rate-text').innerText = `${rate}%`;
 
-            // Clientes Estimados = Leads * tasa
-            const calculatedPatients = (totalLeads * (conversionRate / 100));
-            // Mostrar con 1 decimal o entero si es redondo
-            document.getElementById('calc-patients').innerText = calculatedPatients.toFixed(1);
+            // Pacientes proyectados
+            const patients = totalLeads * (rate / 100);
+            document.getElementById('sim-patients').innerText = patients.toFixed(1);
 
-            // Ingresos Totales = Clientes * ticket promedio
-            const totalRevenue = calculatedPatients * ticketVal;
-            document.getElementById('calc-revenue').innerText = formatCurrency(totalRevenue);
+            // Costo de Adquisición de Cliente
+            const cac = patients > 0 ? (messagingSpend / patients) : 0;
+            document.getElementById('sim-cac').innerText = formatCOP(cac);
 
-            // Costo de Adquisición de Cliente (CAC) = Inversión total / Clientes estimados
-            const cacValue = calculatedPatients > 0 ? (totalSpend / calculatedPatients) : 0;
-            document.getElementById('calc-cac').innerText = formatCurrency(cacValue);
+            // Ingresos Brutos
+            const revenue = patients * ticket;
+            document.getElementById('sim-revenue').innerText = formatCOP(revenue);
 
-            // Retorno Neto = Ingresos - Inversión Publicitaria
-            const netReturn = totalRevenue - totalSpend;
-            const netEl = document.getElementById('calc-net');
-            netEl.innerText = formatCurrency(netReturn);
-            if (netReturn < 0) {
-                netEl.className = "text-4xl font-serif font-bold text-red-600 my-1";
-            } else {
-                netEl.className = "text-4xl font-serif font-bold text-emerald-700 my-1";
-            }
+            // ROAS
+            const roas = messagingSpend > 0 ? (revenue / messagingSpend) : 0;
+            document.getElementById('sim-roas').innerText = `ROAS: ${roas.toFixed(1)}x`;
 
-            // ROAS = Ingreso / Gasto
-            const roasValue = totalSpend > 0 ? (totalRevenue / totalSpend) : 0;
-            document.getElementById('calc-roas').innerHTML = `ROAS: <strong>${roasValue.toFixed(1)}x</strong>`;
+            // Net Return
+            const net = revenue - messagingSpend;
+            document.getElementById('sim-net').innerText = formatCOP(net);
 
-            // ROI (%) = (Ganancia Neta / Inversión) * 100
-            const roiPercent = totalSpend > 0 ? ((netReturn / totalSpend) * 100) : 0;
-            document.getElementById('calc-roi').innerText = `${roiPercent.toLocaleString('es-CO', {maximumFractionDigits: 1})}%`;
+            // ROI %
+            const roiPercent = messagingSpend > 0 ? ((net / messagingSpend) * 100) : 0;
+            document.getElementById('sim-roi').innerText = `${roiPercent.toLocaleString('es-CO', {maximumFractionDigits: 1})}%`;
         }
 
-        // Utilidad para formatear números en moneda local
-        function formatCurrency(value) {
-            return '$' + Math.round(value).toLocaleString('es-CO');
+        function formatCOP(amount) {
+            return '$' + Math.round(amount).toLocaleString('es-CO') + ' COP';
         }
 
-        // Restaurar valores recomendados
-        function resetSimulator() {
-            document.getElementById('ticket-val').value = 650000;
-            document.getElementById('conversion-rate').value = 15;
-            calculateROI();
+        function resetROI() {
+            document.getElementById('sim-ticket').value = 750000;
+            document.getElementById('sim-rate').value = 12;
+            calculateGlobalROI();
         }
 
-        // Inicializar cálculos al cargar
+        // Inicializar al cargar
         window.onload = function() {
-            calculateROI();
+            calculateGlobalROI();
         };
     </script>
 </body>
